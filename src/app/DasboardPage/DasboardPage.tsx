@@ -45,7 +45,10 @@ function DasboardPage() {
             );
           }}
         </ModalConsumer>
-        <button disabled={!check.length} onClick={()=> dispatch(deleteProduct(check))} className={cx(style.deleteButtonDisable,{[style.deleteButton]:check.length})}>Delete Selected</button>
+        <button disabled={!check.length} onClick={()=> {
+            dispatch(deleteProduct(check))
+            setCheck([])
+          }} className={cx(style.deleteButtonDisable,{[style.deleteButton]:check.length})}>Delete Selected</button>
       </div>
       <div className={style.listProductsContainer}>
         {
