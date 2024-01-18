@@ -10,7 +10,6 @@ import { ProductType, variasiType } from '../../types';
 
 function AddProduct({toEdit,modalId}:{toEdit?:ProductType|null,modalId:string}) {
     const dispatch = useAppDispatch()
-    const {products} = useAppSelector(state=> state.products)
     const [id,setId] = useState<number>()
     const [nama,setNama] = useState<string>('')
     const [sku,setSku] = useState<string>('')
@@ -100,7 +99,7 @@ function AddProduct({toEdit,modalId}:{toEdit?:ProductType|null,modalId:string}) 
             <CKEditor
                 editor={ ClassicEditor }
                 data={des}
-                onChange={ ( event,editor ) => {
+                onChange={ ( __arg,editor ) => {
                     setDes(editor.data.get())
                 } }
                 config={{
