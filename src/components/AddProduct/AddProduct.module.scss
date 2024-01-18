@@ -1,0 +1,78 @@
+@import '../../constant.module.scss';
+
+.mainAddProduct{
+    @include Column(flex-start,flex-start);
+    width: 60vw;
+    height: 80vh;
+    overflow-y: auto;
+    border-radius: 20px;
+    padding: 16px;
+    background-color: white;
+    color: $gray;
+    gap: 16px;
+    @media screen and (max-width: $tablet) {
+        width: 80vw;
+        gap: 8px;
+    }
+}
+.headProduct{
+    @include Row(space-between,center);
+    border-bottom: 1px solid $gray;
+    width: 100%;
+    h2{
+        margin: 0
+    }
+}
+@keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+.closeButton{
+    background-color: transparent;
+    color: red;
+    padding: 0;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+}
+.closeButton:hover{
+    border: none;
+}
+
+.labelContainer{
+    @include Column(flex-start,flex-start);
+    gap: 4px
+}
+.select{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    color: $gray;
+    background-color: white;
+    padding: 6px
+}
+.input{
+    @include Input();
+    width: 200px;
+    color: gray;
+}
+.inputVariasi{
+    @include Input();
+    color: gray;
+}
+.variasiContainer{
+    @include Row(flex-start);
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.buttonPlus{
+    @include ButtonPrimary($blue2)
+}
+.buttonMinus{
+    @include ButtonPrimary(red)
+}

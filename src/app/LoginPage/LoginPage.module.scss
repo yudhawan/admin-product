@@ -1,0 +1,31 @@
+@import '../../constant.module.scss';
+.main{
+    width: 100%;
+    height: 100%;
+    @include Column();
+}
+.container{
+    @include Column();
+    gap: 8px;
+}
+.input{
+    @include Input();
+}
+.input:focus{
+    outline: none
+}
+.button{
+    @include ButtonPrimary();
+}
+.button:hover{
+    @include ButtonPrimary($blue2);
+}
+.error{
+    border: 1px solid red;
+    ::placeholder{
+        color: red;
+    }
+}
+.errorText{
+    color: red;
+}

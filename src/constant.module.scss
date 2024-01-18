@@ -1,0 +1,35 @@
+$blue:#1640ab;
+$blue2:rgb(18, 74, 216);
+$gray: #505258;
+$green: #2fab16;
+@mixin Row($justify:center,$align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin Column($justify:center,$align:center){
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin ButtonPrimary($background:$blue,$color:white){
+    padding: 6px 10px;
+    color: $color;
+    background-color: $background;
+    border: none;
+    text-transform: capitalize;
+}
+@mixin Input($background:inherit){
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 2px 6px;
+    height: 40px;
+    background-color: $background;
+    ::placeholder{
+        color: gray;
+    }
+}
+$notebook:1024px;
+$tablet:768px;
+$mobile:425px;

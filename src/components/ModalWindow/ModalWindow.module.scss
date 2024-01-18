@@ -1,0 +1,13 @@
+@import '../../constant.module.scss';
+
+.mainModalWindow{
+    @include Row();
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(19, 19, 42, 0.5);
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(2px);
+}

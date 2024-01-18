@@ -1,0 +1,53 @@
+@import '../../constant.module.scss';
+
+.mainProduct{
+    @include Column(flex-start,flex-start);
+    position: relative;
+    width: 300px;
+    gap: 8px;
+    border: 1px solid $gray;
+    border-radius: 10px;
+    padding: 16px;
+    h1,h4,p{
+        margin: 0;
+        text-align: left;
+    }
+    background-color: $gray;
+    transition: background-color 0.5s ease;
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+    a{
+        font-size: 40px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    p{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    color: rgb(24, 124, 212);
+}
+.mainProduct:hover{
+    background-color: white;
+    a{
+        text-decoration: underline;
+    }
+}
+.selected{
+    background-color: white;
+}
+.deleteButton{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 2px 4px;
+}
+.deleteButton:hover{
+    border: none;
+}

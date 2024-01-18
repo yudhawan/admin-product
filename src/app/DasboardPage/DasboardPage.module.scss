@@ -1,0 +1,62 @@
+@import '../../constant.module.scss';
+
+.main{
+    @include Column(center,flex-start);
+    gap: 16px;
+    margin-block: 36px;
+    @media screen and (max-width: $notebook) {
+        margin-inline: 16px;
+    }
+    
+}
+.headerInfo{
+    width: 1204px;
+    h1{
+        margin: 0;
+    }
+    @media screen and (max-width: $tablet) {
+       width: 100%;
+       h1{
+        font-size: 30px
+       }
+    }
+    @include Row(space-between,center)
+}
+.logoutButton{
+    @include ButtonPrimary(red)
+}
+.accessContainer{
+    @include Row();
+    gap: 16px;
+    @media screen and (max-width: $tablet) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+     }
+}
+.input{
+    @include Input();
+    width: 200px
+}
+.buttonAdd{
+    @include ButtonPrimary($green);
+}
+.listProductsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    @media screen and (max-width: $tablet) {
+        justify-content: center;
+    }
+}
+.deleteButtonDisable{
+    border:none;
+    cursor: default;
+}
+.deleteButton{
+    @include ButtonPrimary(red);
+    border:none;
+    cursor: pointer;
+}
+.deleteButton{
+    border:none
+}
