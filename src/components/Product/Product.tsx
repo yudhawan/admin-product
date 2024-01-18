@@ -9,7 +9,9 @@ function Product({brand,des,nama,sku,variasi,id,checked,handleSelect}:ProductTyp
   const dispatch = useAppDispatch()
   return (
     <div className={cx(style.mainProduct,{[style.selected]:checked.includes(id)})} onClick={()=>handleSelect(id)}>
-      {!checked.includes(id)&&<button className={style.deleteButton} onClick={()=>dispatch(deleteProduct([id]))}>Delete</button>}
+      {!checked.includes(id)&&<button className={style.deleteButton} onClick={(e)=>{
+        e.stopPropagation()
+        dispatch(deleteProduct([id]))}}>Delete</button>}
       <ModalConsumer>
         {
           (modalContext)=>{
