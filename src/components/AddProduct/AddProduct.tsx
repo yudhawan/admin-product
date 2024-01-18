@@ -4,7 +4,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import style from './AddProduct.module.scss'
 import { ModalConsumer } from '../../common/ModalContext';
-import { useAppDispatch, useAppSelector } from '../../redux/appHooks';
+import { useAppDispatch } from '../../redux/appHooks';
 import { addProduct, editProduct } from '../../redux/productSlice';
 import { ProductType, variasiType } from '../../types';
 
@@ -44,7 +44,7 @@ function AddProduct({toEdit,modalId}:{toEdit?:ProductType|null,modalId:string}) 
         openFn(false)
     }
     function handleRemoveVariasi(id:number) {
-        const newData = variasi.filter((val,index)=>index!==id)
+        const newData = variasi.filter((__arg,index)=>index!==id)
         setVariasi(newData)
     }
     useEffect(()=>{
