@@ -1,5 +1,4 @@
 import { createSlice} from '@reduxjs/toolkit'
-import axios from 'axios'
 import { UserType,StatusType } from '../types'
 
 export type typeState = UserType & StatusType
